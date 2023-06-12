@@ -34,7 +34,7 @@ const Navbar = () => {
         <div className="container">
             <div className="logo">
                 <Link to='/' className="link">
-                    <span className="text">fiverr</span>
+                    <span className="text">fiverr!!!</span>
                 </Link>
                 <span className="dot">.</span>
             </div>
