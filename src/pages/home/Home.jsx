@@ -4,7 +4,8 @@ import Featured from '../../components/featured/Featured';
 import TrustedBy from '../../components/trustedBy/TrustedBy';
 import Slide from '../../components/slide/Slide';
 import CatCards from '../../components/catCards/CatCards';
-import {cards} from '../../data';
+import {cards, projects} from '../../data';
+import ProjectCard from '../../components/projectCard/ProjectCard';
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
           <CatCards key={card.id} item={card} />
         ))}
       </Slide>
+      {/* SECTION #1 */}
       <div className="features">
         <div className="container">
           <div className="item">
@@ -54,6 +56,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      {/* SECTION #2 */}
       <div className="features dark">
         <div className="container">
           <div className="item">
@@ -82,6 +85,12 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      <Slide slidesToShow={4} arrowsScroll={5}>
+        {projects.map(card=>(
+          <ProjectCard key={card.id} item={card} />
+        ))}
+      </Slide>
 
     </div>
   )
