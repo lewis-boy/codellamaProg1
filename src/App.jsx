@@ -3,6 +3,7 @@ import Navbar from './components/navbar/Navbar';
 import Footer from './components/footer/Footer';
 import Home from './pages/home/Home';
 import Gig from './pages/gig/Gig';
+import Gigs from './pages/gigs/Gigs';
 import Message from './pages/message/Message';
 import Messages from './pages/messages/Messages';
 import MyGigs from './pages/myGigs/MyGigs';
@@ -38,16 +39,16 @@ function App() {
           element: <Home/>
         },
         {
-          path: "/gig/:id",
-          element: <Gig/>
+          path: "/gigs",
+          element: <Gigs/>
+        },
+        {
+          path: "/myGigs",
+          element: <MyGigs/>
         },
         {
           path: "/orders",
           element: <Orders/>
-        },
-        {
-          path: "/mygigs",
-          element: <MyGigs/>
         },
         {
           path: "/add",
@@ -60,7 +61,11 @@ function App() {
         {
           path: "/message/:id",
           element: <Message/>
-        }
+        },
+        {
+          path: "/gig/:id",
+          element: <Gig/>
+        },
       ]
     },
   ]);
